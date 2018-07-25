@@ -19,46 +19,6 @@ public class App {
     private static final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MainConfig.class);
     private static final ToDoService toDoService = context.getBean(ToDoService.class);
 
-    /*public static void main( String[] args ) {
-        final LocalDateTime date = LocalDateTime.now();
-        final long dateInMillis = Utils.toSeconds(date);
-
-        ToDo toDo1 = new ToDo();
-        toDo1.setTitle("TITOLO 1");
-        toDo1.setContent("CONTENUTO 1");
-        toDo1.setDate(dateInMillis);
-        toDoService.create(toDo1);
-
-        ToDo toDo2 = new ToDo();
-        toDo2.setTitle("TITOLO 2");
-        toDo2.setContent("CONTENUTO 2");
-        toDo2.setDate(dateInMillis);
-        toDo2.setExpiration(Utils.toSeconds(date.plusDays(1)));
-        toDoService.create(toDo2);
-
-        ToDo toDo3 = new ToDo();
-        toDo3.setTitle("TITOLO 3");
-        toDo3.setContent("CONTENUTO 3");
-        toDo3.setDate(dateInMillis);
-        toDo3.setExpiration(Utils.toSeconds(date.plusMonths(1)));
-        toDoService.create(toDo3);
-
-        toDoService.getAllExpired().stream().forEach(System.out::println);
-        System.out.println();
-
-        toDo2.setExpiration(null);
-        toDo2.setContent("CONTENUTO NUOVO");
-        toDoService.update(toDo2);
-
-        toDoService.getAllExpired().stream().forEach(System.out::println);
-        System.out.println();
-
-        toDoService.delete(toDo2);
-        toDoService.getAllExpired().stream().forEach(System.out::println);
-
-        context.close();
-    }*/
-
     public static void main(String[] args) {
 
         terminate:
